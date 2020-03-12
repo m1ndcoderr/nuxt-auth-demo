@@ -7,9 +7,9 @@ module.exports = class UserController extends Common {
   constructor() {
     super()
     this.location = '/controllers/user.controller.js'
-    this.class = 'UserController'
+    this.className = 'UserController'
   }
-
+  git
   /* Добавление нового пользователя в базу данных. */
   async add(email, password) {
     if (email && password) {
@@ -23,7 +23,7 @@ module.exports = class UserController extends Common {
         )
         if (result.rowCount) return result.rows
       } catch (e) {
-        this.console(this.class, this.location, 'add', e.message)
+        this.console(this.className, this.location, 'add', e.message)
       }
     }
     return []
@@ -38,7 +38,7 @@ module.exports = class UserController extends Common {
       )
       if (result.rowCount) return result.rows[0]
     } catch (e) {
-      this.console(this.class, this.location, `getById(${id})`, e.message)
+      this.console(this.className, this.location, `getById(${id})`, e.message)
     }
     return {}
   }
@@ -52,7 +52,12 @@ module.exports = class UserController extends Common {
       )
       if (result.rowCount) return result.rows
     } catch (e) {
-      this.console(this.class, this.location, `getByEmail(${email})`, e.message)
+      this.console(
+        this.className,
+        this.location,
+        `getByEmail(${email})`,
+        e.message
+      )
     }
     return []
   }

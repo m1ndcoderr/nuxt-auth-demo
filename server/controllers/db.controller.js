@@ -5,7 +5,7 @@ module.exports = class DatabaseController extends Common {
   constructor() {
     super()
     this.location = '/controllers/db.controller.js'
-    this.class = 'DatabaseController'
+    this.className = 'DatabaseController'
   }
 
   // Создание таблицы пользователей:
@@ -33,7 +33,7 @@ module.exports = class DatabaseController extends Common {
         ])
       }
     } catch (e) {
-      this.console(this.class, this.location, 'createUsers', e.message)
+      this.console(this.className, this.location, 'createUsers', e.message)
     }
   }
 
